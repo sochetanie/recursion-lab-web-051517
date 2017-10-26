@@ -17,11 +17,11 @@ function reverseString(myString) {
   }
 }
 
-function isPalindrome(myString) {
-  if (myString.length > 1) {
-    if (myString[0] === myString[myString.length-1]) {
-      let substring = myString.substring(1, myString.length-1)
-      isPalindrome(substring)
+function isPalindrome(str) {
+  if (str.length > 1) {
+    if (str[0] === str[str.length-1]) {
+      let subString = str.substring(1, str.length-1)
+      isPalindrome(subString)
     } else {
       return false
     }
@@ -29,11 +29,11 @@ function isPalindrome(myString) {
   }
 }
 
-function addUpTo(arr, i) {
-  if (i > 0) {
-    return addUpTo(arr, i-1) + arr[i]
+function addUpTo(arr, n) {
+  if (n > 0) {
+    return addUpTo(arr, n-1) + arr[n]
   } else {
-   return arr[i]
+   return arr[n]
   }
 }
 
@@ -45,10 +45,10 @@ function maxOf(arr) {
   }
 }
 
-function includesNumber(arr, n) {
+function includesNumber(arr, num) {
   if (arr.length > 1) {
-    return arr[0] === n ? true : includesNumber(arr.slice(1), n)
+    return arr[0] === num ? true : includesNumber(arr.slice(1), num)
   } else {
-    return arr[0] === n
+    return arr[0] === num
   }
 }
