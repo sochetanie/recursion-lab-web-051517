@@ -1,19 +1,19 @@
 // Code your solution here!
-function printString(myString) {
-  console.log(myString[0])
-  if (myString.length > 1) {
-    let substring = myString.substring(1, myString.length)
-    printString(substring)
+function printString(str) {
+  console.log(str[0])
+  if (str.length > 1) {
+    let subString = str.substring(1, str.length)
+    printString(subString)
   } else {
     return true
   }
 }
 
-function reverseString(myString) {
-  if (myString.length > 1) {
-    return reverseString(myString.substring(1)) + myString[0]
+function reverseString(str) {
+  if (str.length > 1) {
+    return reverseString(str.substring(1)) + str[0]
   } else {
-    return myString
+    return str
   }
 }
 
